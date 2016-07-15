@@ -11,59 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712235122) do
+ActiveRecord::Schema.define(version: 20160709181742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "projects", force: :cascade do |t|
-    t.string   "title"
-    t.date     "startdate"
-    t.date     "enddate"
-    t.date     "app_deadline"
-    t.text     "description"
-    t.integer  "hours_per_week"
-    t.integer  "compensation"
-    t.integer  "education_level"
-    t.integer  "state",           default: 1
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-  end
-
-<<<<<<< HEAD
-<<<<<<< 559e1cd87b8847bf130e902af55d5d1932171c7d
-<<<<<<< HEAD
-<<<<<<< 72f3b5fbf66977d231fc9ac9e494e1a8c28a31a8
-  create_table "questions", force: :cascade do |t|
-    t.integer  "project_application_id"
-    t.string   "title"
-    t.text     "answer"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-=======
->>>>>>> Create application table/model
-=======
->>>>>>> e0f24135902b8a107abc88aadf5d6962855ca7f7
-  create_table "research_applications", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "project_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "status"
-  end
-
-<<<<<<< HEAD
-<<<<<<< 559e1cd87b8847bf130e902af55d5d1932171c7d
-=======
->>>>>>> Create project table and model
-=======
->>>>>>> 6d2e19b880afbef59319ef0269fb6b18526e5439
-=======
->>>>>>> Create application table/model
-=======
->>>>>>> e0f24135902b8a107abc88aadf5d6962855ca7f7
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
