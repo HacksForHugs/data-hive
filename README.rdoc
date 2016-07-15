@@ -1,0 +1,8 @@
+== README
+
+Proposed work flow:
+
+* Look at issues for things to work on and assign them to yourself, or create your own issue and assign it to yourself
+* Create a new branch with the name in the form yourname/issue_name to work on the issue
+* Once you're ready to merge, assign someone else to review/test your code before merging your issue branch with master. If you tag me, I'll get back to you within 24 hours.
+
