@@ -11,7 +11,7 @@
 #
 
 class ResearchApplication < ActiveRecord::Base
-  enum status: [:bookmarked, :submitted, :pending, :approved, :unapproved]
+  enum status: [:leader, :bookmarked, :submitted, :pending, :approved, :unapproved]
 
   belongs_to :user
   belongs_to :project

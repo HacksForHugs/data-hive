@@ -6,6 +6,13 @@ Rails.application.routes.draw do
       sessions: 'users/sessions'
   }
 
+
+#Projects have many users too, project creation will automatically generate application connector with status set to leader.
+  # resources :users do
+  #   resources :projects
+  # end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
