@@ -1,8 +1,55 @@
-projects index </br>
-<% @projects.each do |p| %>
-  <%= p.title %> <%= link_to p.title, project_path(p) %> </br>
+
+<% if current_user.present? %>
+	<%= render "layouts/nav" %>
+<% else %>
+	<%= render "layouts/nav_login" %>
 <% end %>
 
 
-<%= link_to 'new project', new_project_path%>
+<div class="small-5 large-10 small-centered large-uncentered large-offset-2 columns page_title">
+	Project Listings
+</div>
 
+
+
+<div class="small-6 large-7 large-offset-2 columns">
+	<dl class="sub-nav">
+	  <dd class="active"><a href="#">All</a></dd>
+	</dl>
+</div>
+
+<div class="small-12 large-7 large-offset-2 columns h_line">
+		<hr>
+</div>
+
+<!--
+<div class='small-12 columns hide-for-large-up filter-settings'>
+	<div class="small-12 columns text-center">
+		<span class='filter_button'>Filter by:</span>
+	</div>
+	<div class="small-12 columns field">
+		text
+	</div>
+</div>
+-->
+
+
+<%= render "listings" %>
+
+<!--
+<div class="large-3 show-for-large-up columns">
+	<div class="large-12 columns text-center">
+		<span class='filter_button'>Filter by:</span>
+	</div>
+	<div class="large-12 columns field">
+		<%= check_box_tag(:test) %>
+		<%= label_tag(:test, "Test Label") %>
+	</div>
+</div>
+-->
+
+<div class="row">
+	<div class="large-12 large-offset-3 column">
+		<%= will_paginate @projects , :class => "datahive_pagination"%>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<nav class="top-bar" data-topbar role="navigation">
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <%= link_to image_tag('ds_logo_resized3.png'), root_path %>
+    <%= link_to 'Home', root_path%>
+
+    <div class="right verticalLine">
+      <%= link_to 'Log In', new_user_session_path, class: 'login_link' %>
+      <%= link_to 'Register', new_user_registration_path, class: 'register_link' %>
+    </div>
+
+    <div class="show-for-medium-up right">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </section>
+</nav>

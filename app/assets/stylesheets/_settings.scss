@@ -1,0 +1,9 @@
+@mixin button-hover-styles {
+	background-color: $hover-color;
+	color: #FFFFFF
+}
+
+
+@mixin rounded-corners {
+	border-radius: 5px;
+}
