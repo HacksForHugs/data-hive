@@ -1,0 +1,34 @@
+
+<div class="small-12 large-7 large-offset-2 columns">
+	<% @projects.each do |project| %>
+		<% @positions = project.positions %>
+		<%= link_to project do %>
+			<div class="large-12 columns listing">
+				<div id="rectangle"></div>
+				<div class="row left">
+					<span class="large-12 columns title"><%= project.title %></span>
+				</div>
+				<div class="row fullWidth left">
+					<span class="large-9 columns subtitle"><%= project.subtitle %></span>
+					<span class="large-3 columns show-for-medium-up workload-top"><i class="fa fa-clock-o"></i> <%= project.hours_per_week %> hrs/wk </span>
+				</div>
+				<div class="row fullWidth left">
+					<hr>
+				</div>
+				<div class="row fullWidth left">
+					<div class="small-5 medium-7 large-8 columns hide-for-small-only bottom-infobar">
+						<span class="looking-for">Looking For</span>
+						<span class="positions">
+							<% @positions.each do |position| %>
+								<span class="position-pads"> <%= position %> </span>
+							<% end %>
+						</span>
+					</div>
+					<span class="small-5 columns show-for-small-only bottom-infobar workload-bot"><i class="fa fa-clock-o"></i> <%= project.hours_per_week %> hrs/wk </span>
+					<span class="small-7 medium-5 large-4 date-pads">Posted: <%= project.updated_at.to_time.strftime("%b %d, %Y") %></span>
+
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+</div>

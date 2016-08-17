@@ -1,0 +1,21 @@
+
+@import "variables";
+
+
+.signup-form {
+	padding-top: 150px;
+}
+
+input[type=submit] {
+	font-size: 14px;
+	border: 1px solid $datahive-blue;
+	border-radius: 2px;
+	background: transparent;
+	margin-bottom: 10px;
+
+	&:hover {
+		background: $hover-color;
+		color: #FFFFFF;
+	}
+}
+

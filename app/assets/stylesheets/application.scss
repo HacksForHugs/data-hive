@@ -15,4 +15,232 @@
  *= require foundation_and_overrides
 
  */
+ @import "variables";
+ @import "settings";
  @import "foundation_and_overrides";
+ @import "projects";
+
+.top-bar {
+	background: transparent !important;
+	border: 1px solid $datahive-blue;
+	height: 60px;
+	font-family: Helvetica-Light;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	overflow: visible;
+	a {
+	    background: transparent;
+	    color: $link-color;
+	    line-height: 40px;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    display: inline;
+	}
+
+	.register_link {
+		font-size: 14px;
+	}
+
+	.login_link {
+		font-size: 14px;
+		border: 1px solid $datahive-blue;
+		border-radius: 2px;
+
+		&:hover {
+			background: $hover-color;
+			color: #FFFFFF;
+		}
+	}
+
+	.verticalLine {
+		border-left: 1px solid #003262;
+    	height: 40px;
+    	padding-left: 20px;
+
+    	.menu {
+    		background: white;
+    		color: $link-color;
+    		margin: 9px 0 0 0;
+
+    		.is-dropdown-submenu {
+    			border: 1px solid $datahive-blue;
+    			min-width: auto;
+    			text-align: center;
+    			z-index: 10;
+    		}
+    	}
+	}
+
+}
+
+.verticalLine {
+	border-left: 1px solid #003262;
+	height: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.filter_button {
+	font-size: 14px;
+	border: 1px solid $datahive-grey;
+	border-radius: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	&:hover {
+		background: $hover-color;
+		color: #FFFFFF;
+	}
+}
+
+
+
+img {
+    float: left;
+    padding-left: 30px;
+}
+
+
+.page_title {
+	/* Title that goes on each page */
+	font-family: $page-title-font ;
+	font-size: $page-title-fontsize ;
+	color: $datahive-black;
+	padding-top: 150px;
+}
+
+.page_title_new_project {
+	/* Title that goes on each page */
+	font-family: $page-title-font ;
+	font-size: $page-title-fontsize ;
+	color: $datahive-black;
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+
+.fullWidth {
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: initial;
+}
+
+.datahive_pagination {
+  padding: 0.3em;
+  cursor: default; 
+
+  a, span, em {
+  	padding: 0.2em 0.5em;
+  }
+
+  .disabled {
+  	color: $datahive-grey;
+  }
+
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    color: $datahive-black;
+  }
+
+  a {
+  	border: 1px solid $datahive-blue;
+    color: $datahive-blue;
+    text-decoration: none;
+
+    &:hover, &:focus {
+	  border-color: $datahive-blue;
+      background: $hover-color;
+      color: white;
+    }
+  }
+
+  .pageinfo {
+  	color: $datahive-blue;
+    padding-top: 0.8em;
+  }
+
+  .previous_page, .next_page {
+  	border-width: 0px;
+  	margin-left : 1em;
+  }
+
+ }
+
+.textbox {
+	border: 0px !important;
+	background: $textfield-nofocus !important;
+	display: inline !important;
+	height: 30px !important;
+
+	&:focus {
+		background: transparent !important;
+		border: 1px solid $datahive-blue !important;
+	}
+
+}
+
+.error-message {
+	color: red;
+}
+
+#error_explanation {
+	color: red;
+}
+
+a {
+	color: $datahive-blue;
+
+	&:hover {
+		color: $datahive-blue;
+	}
+}
+
+.datahive-display {
+	background-color: transparent;
+	border: 1px solid $datahive-blue;
+	padding-top: 20px;
+	padding-bottom: 50px;
+	margin-bottom: 100px;
+
+	.textbox_white {
+		display: inline;
+		border: 1px solid $datahive-blue;
+		height: 20px;
+
+		&:focus {
+			background: transparent;
+			border: 1px solid $datahive-blue;
+		}
+	}
+
+	.selectbox_white {
+		display: inline;
+		border: 1px solid $datahive-blue;
+		height: 20px;
+		padding:0 0 0 1em;
+
+		&:focus {
+			background: transparent;
+			border: 1px solid $datahive-blue;
+		}
+	}
+}
+
+.side-label {
+	font-family: Helvetica;
+	font-size: 16px;
+	color: $datahive-black;
+	letter-spacing: 1px;
+}
+
+.creation_rows {
+	margin-bottom: 10px;
+
+	.info_line {
+		font-family: $page-title-font;
+		font-size: $labels-fontsize;
+	}
+}
+
+

@@ -5,15 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+    <!--<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">-->
+    
 
+    <script $(document).foundation()></script>
     <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag    "foundation" %>
+    <%= javascript_include_tag "jquery.js" %>
+    <%= javascript_include_tag "foundation.min.js" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+
   </head>
 
   <body>
 
+    <header>
+      <% if current_user.present? %>
+        <%= render "layouts/nav" %>
+      <% else %>
+        <%= render "layouts/nav_login" %>
+      <% end %>
+    </header>
     <%= yield %>
 
   </body>

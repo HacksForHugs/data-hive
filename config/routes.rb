@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     root to: 'projects#index', as: 'authenticated_root'
   end
 
-  root 'home#index'
+  root 'projects#index'
   ################
   # DEVISE
   ################

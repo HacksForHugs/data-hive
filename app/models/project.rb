@@ -22,10 +22,10 @@
 
 class Project < ActiveRecord::Base
   attr_accessor
-  enum state: [:active, :inactive]
-  enum education_level: [:undergraduate, :graduate, :both]
-  enum compensation: [:units, :paid, :other]
-  enum field: [:engineeringcs, :economics]
+  enum state: [:Active, :Inactive]
+  enum education_level: [:Undergraduate, :Graduate, :Both]
+  enum compensation: [:None, :Paid, :Units]
+  enum field: ["Business/Economics", "Engineering/CS", "Environmental Science/Biology", "Humanities","Social Science", "Physical Science", "Other/None"]
 
   has_many :project_tags
   has_many :tags, through: :project_tags

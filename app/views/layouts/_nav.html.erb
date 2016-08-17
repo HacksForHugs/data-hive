@@ -1,0 +1,35 @@
+<nav class="top-bar" data-topbar role="navigation">
+ 
+    <!-- Left Nav Section -->
+    <%= link_to image_tag('ds_logo_resized3.png'), root_path %>
+    <%= link_to 'Home', root_path%>
+    <%= link_to 'Create', new_project_path%>
+
+    <div class="right verticalLine">
+      <% user_email = current_user.email %>
+      <% email_index = user_email.index("@") %>
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li>
+          <%= current_user.email[0,email_index] %>
+          <ul class="menu">
+            <div class="row">
+                <%= link_to "Profile", root_path %>
+            </div>
+            <div class="row">
+                <%= link_to "Dashboard", root_path %>
+            </div>
+            <div class="row">
+                <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="show-for-medium-up right">
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  
+</nav>
+    
