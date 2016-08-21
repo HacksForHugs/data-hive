@@ -42,4 +42,14 @@ class Project < ActiveRecord::Base
   def add_leader(current_project, user)
     ResearchApplication.create(project: current_project, user: user, status: 'leader')
   end
+
+  def accept(application_ids)
+    applications = self.research_applications.where(id: application_ids)
+    applications.map(&:approved!)
+  end
+
+  def reject(application_ids)
+    applications = self.research_applications.where(id: application_ids)
+    applications.map(&:unapproved!)
+  end
 end
